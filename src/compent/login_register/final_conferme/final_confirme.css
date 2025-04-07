@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+.final_right .form_input{
+    margin-top: 160px;
+}
+
+.final_right .form_input h2{
+    margin-bottom: 50px;
+}
+
+.final_right .form_input .mesage_corect{
+    display: flex;
+    align-items: center;
+    background-color: rgba(11, 206, 206, 0.078);
+    color: rgb(11, 206, 206);
+    margin-bottom: 50px;
+}
+
+
+
+.final_right .btn{
+    background-color: #E15A8D !important;
+    color: aliceblue !important;
+    border: 2px solid #E15A8D !important;
+    transition: .3s ease;
+    width: 300px !important;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: 'Inter';
+
+}
+
+.final_right .btn:hover{
+    background-color: aliceblue !important;
+    color: #E15A8D !important;
+}

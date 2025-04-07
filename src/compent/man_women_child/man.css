@@ -1,0 +1,142 @@
+.man_women_baby {
+    margin-top: 50px;
+}
+.man_women_baby .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+
+}
+
+.man_women_baby .container .title{
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    
+}
+
+.ligne{
+    height: 3%;
+    width: 275px;
+}
+
+.man_women_baby .container .title h3{
+    font-family: 'Italiana',serif;
+    font-weight: 400;
+    font-size: 40px;
+
+}
+
+.photo{
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.men{
+    position: relative;
+}
+.men img{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    transition: .3s ease;
+    object-fit: cover;
+
+}
+.men:hover img{
+    filter: brightness(0.6);
+    cursor: pointer;
+
+}
+
+.men::after{
+    content: "MAN";
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    font-family: 'Italiana',serif;
+}
+.men:hover::after{
+    opacity: 1;
+}
+
+/**/
+.women{
+   
+    position: relative;
+}
+.women img{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    transition: .3s ease;
+    object-fit: cover;
+
+}
+.women:hover img{
+    filter: brightness(0.6);
+    cursor: pointer;
+
+}
+
+.women::after{
+    
+    content: "WOMEN";
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    font-family: 'Italiana',serif;
+}
+.women:hover::after{
+    opacity: 1;
+}
+
+/**/
+.baby{
+    position: relative;
+}
+.baby img{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    transition: .3s ease;
+    object-fit: cover;
+
+}
+.baby:hover img{
+    filter: brightness(0.6);
+    cursor: pointer;
+
+}
+
+.baby::after{
+    content: "BABY";
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    font-family: 'Italiana',serif;
+}
+.baby:hover::after{
+    opacity: 1;
+}
+

@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+.right_new .form_input{
+    margin-top: 90px;
+}
+.right_new .form_input h2{
+    margin-bottom: 20px;
+}
+
+.right_new .btn{
+    background-color: #E15A8D !important;
+    color: aliceblue !important;
+    border: 2px solid #E15A8D !important;
+    transition: .3s ease;
+
+}
+
+.right_new .btn:hover{
+    background-color: aliceblue !important;
+    color: #E15A8D !important;
+}
+
+.right_new .confrirme{
+    font-family: 'Poppins';
+    margin-top: 10px;
+    font-size: 16px;
+    color: #00000074;
+}
+
+.right_new .confrirme span{
+    cursor: pointer;
+    color: #000;
+    font-weight: 500;
+    
+}
+.right_new .confrirme span:hover{
+    text-decoration: underline;
+}

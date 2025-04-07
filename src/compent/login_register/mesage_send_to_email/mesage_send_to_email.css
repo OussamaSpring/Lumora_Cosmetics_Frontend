@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+.mesage .form_input{
+    margin-top: 160px;
+}
+
+.mesage .form_input h2{
+    margin-bottom: 50px;
+}
+
+.mesage .form_input .mesage_corect{
+    position: relative;
+    display: flex;
+    align-items: center;
+   gap: 10px;
+    background-color: rgba(11, 206, 206, 0.078);
+    color: rgb(11, 206, 206);
+    margin-bottom: 50px;
+    width: 350px;
+}
+
+.mesage .form_input .mesage_corect .icon_corect{
+    
+    
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+
+
+
+
+.mesage .btn{
+    background-color: #E15A8D !important;
+    color: aliceblue !important;
+    border: 2px solid #E15A8D !important;
+    transition: .3s ease;
+    width: 300px !important;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: 'Inter';
+
+}
+
+.mesage .btn:hover{
+    background-color: aliceblue !important;
+    color: #E15A8D !important;
+}

@@ -1,0 +1,69 @@
+/* Renamed main class to avoid conflicts */
+.hero-swiper-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 115px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Renamed to avoid conflicts with product swiper */
+.hero-swiper {
+  width: 100%;
+  height: 500px; /* Fixed height for consistency */
+}
+
+.hero-slide-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Scoped selector to target only within hero swiper */
+.hero-swiper .swiper-slide {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* Namespace pagination for hero swiper */
+.hero-swiper .swiper-pagination {
+  bottom: 10px !important;
+}
+
+.hero-swiper .swiper-pagination-bullet {
+  width: 12px !important;
+  height: 12px !important;
+  background: #ff69b4 !important;
+  opacity: 0.5;
+  transition: all 0.3s ease;
+}
+
+.hero-swiper .swiper-pagination-bullet-active {
+  background: #ff1493 !important;
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+@media (max-width: 768px) {
+  .hero-swiper {
+    height: 400px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-swiper {
+    height: 300px;
+  }
+}
