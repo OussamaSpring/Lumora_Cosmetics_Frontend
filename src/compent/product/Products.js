@@ -81,7 +81,7 @@ function Products() {
                         nextEl: '.product-nav-next',
                         prevEl: '.product-nav-prev',
                     }}
-                    modules={[Pagination, Navigation]}
+                    modules={[ Navigation]}
                     breakpoints={{
                         300: {
                             slidesPerView: 2,

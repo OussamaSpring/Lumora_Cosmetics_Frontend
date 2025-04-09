@@ -97,7 +97,7 @@ const Header = ({search,setsearch}) => {
             <span>Hello, {user.name || user.email}</span>
         </li>
         <li className="dr">
-            <Link to="/profile" className="link_drop">
+            <Link to="/Personel" className="link_drop">
                 <FiUser /> Personal Info
             </Link>
         </li>

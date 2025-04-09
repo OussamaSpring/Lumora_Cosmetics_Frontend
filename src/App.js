@@ -19,7 +19,9 @@ import Main_sw from './compent/main_swiper/Main_sw';
 import Man_women from './compent/man_women_child/Man_women';
 import Pro_search from './compent/product/Pro_search';
 import Cart from './compent/cart/Cart';
-
+import Profile from './compent/profile_setting/ProfilePage';
+import ProfilePage from './compent/profile_setting/ProfilePage';
+import Vender from './compent/vender_order/Vender_order'
 function App() {
   const [token, setToken] = useState(localStorage.getItem("userToken") ?? null);
   const [search, setSearch] = useState("");
@@ -31,17 +33,35 @@ function App() {
 
   return (
     <div>
-      <Routes>
+
+      {/* <Vender_order/> */}
+
+      {/* <Vender/> */}
+
+      
+
+
+
+      
+
+      
+
+
+
+
+
+
+       /* <Routes>
         <Route
           path="/"
           element={
             <>
               <Head search={search} setsearch={handleSearch} />
               
-              {/* Conditional rendering based on search value */}
-              {!search || search.trim() === "" ? (
-                // If search is empty, show these components
-                <>
+             
+                {!search || search.trim() === "" ? (
+                
+                 <>
                   <Main_sw />
                   <Man_women />
                   <Products />
@@ -52,9 +72,9 @@ function App() {
               )}
             </>
           }
-        />
+        />  
 
-        <Route
+          <Route
           path="/login"
           element={<Login_registre token={token} setToken={setToken} />}
         />
@@ -94,8 +114,13 @@ function App() {
           path="/product/:productId"
           element={<ProductDetails />}
         />
-      </Routes>
-    </div>
+
+        <Route
+          path="/Personel"
+          element={<ProfilePage/>}
+        />
+      </Routes>   
+     </div> 
   );
 }
 
