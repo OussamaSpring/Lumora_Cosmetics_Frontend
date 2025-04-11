@@ -1,0 +1,51 @@
+* {
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .container {
+    width: 100%; 
+  }
+  
+  .entryarea {
+    position: relative;
+    width: 100%; 
+  }
+  
+  input {
+    position: absolute;
+    width: 100%; 
+    outline: none;
+    font-size: 1em;
+    padding-left: 15px;
+    height: 100%; 
+    border-radius: 10px;
+    border: 2px solid;
+    background-color: transparent;
+    z-index: 1111;
+  }
+  
+  .labelline {
+    position: absolute;
+    font-size: 0.8em;
+    color: #363535;
+    background-color: white;
+    margin: 0 15px;
+    transition: 0.2s ease;
+  }
+  
+  input:focus,
+  input:valid {
+    border-color: green;
+  }
+  
+  input:focus + .labelline,
+  input:not(:placeholder-shown) + .labelline {
+    color: green;
+    height: 25px;
+    line-height: 30px;
+    transform: translate(-8px, -16px) scale(0.95);
+    padding: 0 3px;
+    font-weight: 500;
+    z-index: 1111;
+  }
+  
