@@ -5,7 +5,8 @@ import './Login.css';
 
 export default function Login() {
   return (
-    <div className="Login">
+    <div className="LoginPage">
+      <div className="Login">
       <div className="box">
         <div className="header">
           <div className="icon">
@@ -25,7 +26,7 @@ export default function Login() {
         <Button variant="contained" sx={{ backgroundColor: "#0B307D", width: "100%", height:"40px"}}>LOGIN</Button>
       </div>
     </div>
-    
+    </div>
     
   );
 }

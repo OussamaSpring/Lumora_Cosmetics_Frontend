@@ -104,6 +104,7 @@ export default function Search() {
         <div className="main-content">
           <div className="filter-box">
             <h3>Filter Products</h3>
+            
             {priceError && (
               <div className="error-text">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">

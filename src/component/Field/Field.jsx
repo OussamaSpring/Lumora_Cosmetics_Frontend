@@ -14,7 +14,8 @@ export default function Field({
   onChange
 }) {
   return (
-    <div className="container" style={{ width }}>
+    <div className="Field">
+      <div className="container" style={{ width }}>
       <div className="entryarea" style={{ height, lineHeight: height }}>
         <input
           name={name}
@@ -46,5 +47,7 @@ export default function Field({
         `}</style>
       </div>
     </div>
+    </div>
+    
   );
 }

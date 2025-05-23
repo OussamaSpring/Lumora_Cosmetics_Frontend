@@ -27,7 +27,8 @@ const handleChange = (e)=>{
     console.log(formData.name)
 }
   return (
-    <div className="window">
+    <div className="ProfilePage">
+        <div className="window">
         <div className="leftSide">
             <div className="header">
                 <img src="/Lumora.svg" alt="" />
@@ -86,6 +87,8 @@ const handleChange = (e)=>{
             </div>
         </div>
     </div>
+    </div>
+    
             
   )
 }
