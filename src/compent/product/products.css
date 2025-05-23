@@ -1,5 +1,5 @@
 /* Main container for products page */
-.products-container {
+.a-products-container {
   padding: 20px;
   margin-top: 50px;
   max-width: 1800px; 
@@ -8,7 +8,7 @@
 }
   
 /* Categories section styling */
-.categories-section {
+.a-categories-section {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -16,7 +16,7 @@
   gap: 10px;
 }
   
-.category-btn {
+.a-category-btn {
   background-color: #f5f5f5;
   color: #333;
   border: 1px solid #ddd;
@@ -26,46 +26,44 @@
   transition: all 0.3s ease;
 }
   
-.category-btn:hover {
+.a-category-btn:hover {
   background-color: #e0e0e0;
 }
   
-.category-btn.active {
+.a-category-btn.a-active {
   background-color: #ff6600;
   color: white;
   border-color: #ff6600;
 }
   
-/* Swiper container - renamed to be more specific */
-.products-slider-container {
+/* Swiper container */
+.a-products-slider-container {
   max-width: 1600px;
   margin: 0 auto;
-  position: relative; /* Added for absolute positioning of nav buttons */
+  position: relative;
 }
 
 /* Specific product swiper styles */
-.product-swiper {
+.a-product-swiper {
   width: 100%;
   padding: 20px 0;
 }
 
-/* Make sure product slides have consistent width */
-.product-swiper .swiper-slide {
+.a-product-swiper .swiper-slide {
   width: 320px !important;
   flex-shrink: 1 !important;
-  height: auto !important; /* Allow height to be determined by content */
+  height: auto !important;
 }
 
-/* Style overrides ONLY for product swiper pagination */
-.product-swiper .swiper-pagination-bullet-active {
+.a-product-swiper .swiper-pagination-bullet-active {
   background-color: #ff6600 !important;
 }
   
-/* Style overrides for product swiper navigation buttons */
-.product-nav-next,
-.product-nav-prev {
+.a-product-nav-next,
+.a-product-nav-prev {
   color: #FFF !important;
-  background-color: #bfb9cf78;
+  font-size: 100px !important;
+  background-color: rgba(251, 142, 194, 0.5) !important;
   width: 40px !important;
   height: 40px !important;
   border-radius: 50% !important;
@@ -77,58 +75,80 @@
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(2px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.product-nav-next:hover,
-.product-nav-prev:hover {
-  background-color: #bfb9cfbe;
+.a-product-nav-next:hover,
+.a-product-nav-prev:hover {
+  background-color: rgba(251, 142, 194, 0.8) !important;
+  transform: translateY(-50%) scale(1.1);
 }
 
-.product-nav-next {
-  right: -20px;
+.a-product-nav-next {
+  right: 10px;
 }
 
-.product-nav-prev {
-  left: -20px;
+.a-product-nav-prev {
+  left: 10px;
 }
 
-/* Add the arrow icons */
-.product-nav-next:after,
-.product-nav-prev:after {
+.a-products-container .a-title {
+  margin: 30px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 9px;
+  width: fit-content;
+}
+
+.a-products-container .a-ligne {
+  height: 3px;
+  width: 275px;
+  flex-shrink: 0;
+}
+
+.a-products-container .a-title h3 {
+  font-family: 'Italiana',serif;
+  font-weight: 500;
+  font-size: 40px;
+}
+
+.a-product-nav-next:after,
+.a-product-nav-prev:after {
   font-family: 'swiper-icons';
-  font-size: 22px;
+  font-size: 30px !important;
   text-transform: none !important;
   letter-spacing: 0;
   font-variant: initial;
   line-height: 1;
 }
 
-.product-nav-prev:after {
+.a-product-nav-prev:after {
   content: 'prev';
+  padding-right: 2px;
 }
 
-.product-nav-next:after {
+.a-product-nav-next:after {
   content: 'next';
 }
   
-/* Responsive adjustments */
 @media (max-width: 768px) {
-  .categories-section {
+  .a-categories-section {
     flex-direction: column;
     align-items: center;
   }
     
-  .category-btn {
+  .a-category-btn {
     width: 80%;
   }
   
-  /* Adjust navigation buttons for smaller screens */
-  .product-nav-next {
+  .a-product-nav-next {
     right: 0;
   }
   
-  .product-nav-prev {
+  .a-product-nav-prev {
     left: 0;
   }
 }

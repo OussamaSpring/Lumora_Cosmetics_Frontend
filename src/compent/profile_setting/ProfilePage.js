@@ -9,7 +9,7 @@ import logo from './photo/logo.png'
 import person from './photo/person.png'
 import { CartContaxt } from '../../contaxt/Contaxt';
 
-
+import { Link, useNavigate } from 'react-router-dom';
 
 
 
@@ -97,10 +97,13 @@ export default function ProfilePage() {
         {/* Main Content */}
         <div className="main-content">
           <div className="header">
+            <Link to="/">
             <button className="back-button">
               <ArrowLeft size={18} />
               <span>Back</span>
             </button>
+            </Link>
+            
 
             <div className="header-right">
               <div className="notification-container">

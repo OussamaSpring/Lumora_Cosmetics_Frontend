@@ -1,0 +1,311 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+.dashboard {
+  display: flex;
+  max-width: 1200px;
+  margin: 20px auto;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  height: 90vh; /* Set a reasonable height */
+ 
+}
+
+.main {
+  flex: 1;
+  
+  position: relative;
+  z-index: 9;
+  overflow-y: auto; /* Enable vertical scrolling */
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  /* position: sticky; */
+  top: 0;
+  background: white;
+  z-index: 10;
+  
+}
+
+.back-btn {
+  display: flex;
+  align-items: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-right: 20px;
+  font-weight: 500;
+}
+
+.be{
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+}
+
+.notification {
+  position: relative;
+  margin-right: 15px;
+  display: inline-block;
+}
+
+.notification-icon {
+  background-color: #f2f2f2;
+  padding: 8px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.badge {
+  position: absolute;
+  top: -8px;
+  right: -5px;
+  width: 16px;
+  height: 16px;
+  background: #ff4081;
+  color: white;
+  border-radius: 50%;
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatar {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.form-title {
+  font-size: 28px;
+  font-weight: 500;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.form-layout {
+  display: flex;
+  gap: 40px;
+  width: 100%;
+  flex: 1;
+  overflow-y: auto;
+  padding-right: 10px; /* Gives space for scrollbar */
+}
+
+.left-section, .right-section {
+  flex: 1;
+  min-width: 0; /* Prevents flex items from growing beyond container */
+}
+
+.image-section {
+  margin-bottom: 20px;
+}
+
+.upload-box {
+  border: 1px dashed #ccc;
+  border-radius: 8px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  background-color: #f9f9f9;
+  cursor: pointer;
+}
+
+.upload-icon {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #666;
+}
+
+.upload-text {
+  color: #555;
+  font-size: 14px;
+}
+
+.note {
+  color: #ff4081;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.upload-container {
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+.thumbnail-container {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.thumbnail-btn {
+  width: 70px;
+  height: 70px;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f5f5f5;
+  color: #555;
+  font-size: 18px;
+}
+
+.status-label {
+  font-size: 16px;
+  margin-bottom: 15px;
+  color: #555;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.form-col {
+  flex: 1;
+}
+
+.input, .textarea, .select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+.button-group {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+  position: sticky;
+  bottom: 0;
+  background: white;
+  z-index: 5;
+}
+
+.discard-btn {
+  padding: 12px 25px;
+  border: 1px solid #ff4081;
+  border-radius: 6px;
+  background: white;
+  color: #ff4081;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.save-btn-man {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 6px;
+  background: #ff4081;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.product-items {
+  margin-top: 20px;
+}
+
+h3 {
+  font-size: 18px;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.span_input_add_product {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: capitalize;
+  display: block;
+  margin-top: 7px;
+  margin-left: 20px;
+}
+
+.section_from_input {
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #454545;
+  border-radius: 20px;
+
+}
+.section_from_input:hover >.right_pop{
+  color: #E15A8D;
+}
+.right_pop{
+  margin-right: 20px;
+  font-size: 16px;
+ 
+}
+.input_right_information {
+  margin-top: 20px;
+}
+
+/* Custom scrollbar styles */
+.main::-webkit-scrollbar,
+.form-layout::-webkit-scrollbar {
+  width: 8px;
+}
+
+.main::-webkit-scrollbar-track,
+.form-layout::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.main::-webkit-scrollbar-thumb,
+.form-layout::-webkit-scrollbar-thumb {
+  background: #E15A8D;
+  border-radius: 10px;
+}
+
+.main::-webkit-scrollbar-thumb:hover,
+.form-layout::-webkit-scrollbar-thumb:hover {
+  background: #DA3573;
+}
+
+/* For Firefox */
+.main,
+.form-layout {
+  scrollbar-width: thin;
+  scrollbar-color: #E15A8D #f1f1f1;
+}

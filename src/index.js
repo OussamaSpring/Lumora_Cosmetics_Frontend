@@ -3,20 +3,16 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { Context } from './contaxt/Contaxt';
-import {
-  BrowserRouter,
-  Routes,
-  Route,
-} from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
+import Cart_provaider from './compent/context_reda/cart_contect';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-    <Context>
-    <App />
-    </Context>
+      <Cart_provaider>
+        <App />
+      </Cart_provaider>
     </BrowserRouter>
   </React.StrictMode>
 );

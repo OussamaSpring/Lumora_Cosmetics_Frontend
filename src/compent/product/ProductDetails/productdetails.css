@@ -1,0 +1,276 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+.product-details-container {
+  font-family: "Poppins", sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.back-button-container {
+  margin-bottom: 20px;
+}
+
+.back-button {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background: none;
+  border: 1px solid #ff4081;
+  color: #ff4081;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.back-button:hover {
+  background-color: #ffeff4;
+}
+
+.product-details-content {
+  display: flex;
+  gap: 40px;
+}
+
+/* Product Images */
+.product-images {
+  flex: 1;
+  max-width: 450px;
+}
+
+.main-image {
+  width: 100%;
+  height: 450px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.main-image img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.thumbnail-images {
+  display: flex;
+  gap: 10px;
+}
+
+.thumbnail {
+  width: 70px;
+  height: 70px;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+
+.thumbnail.active {
+  border-color: #ff4081;
+}
+
+.thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Product Info */
+.product-info {
+  flex: 1;
+}
+
+.product-name {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.product-rating {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.stars {
+  display: flex;
+  color: #ff4081;
+}
+
+.star {
+  font-size: 18px;
+}
+
+.review-count {
+  color: #666;
+  font-size: 14px;
+}
+
+.product-price {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.product-description {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.product-size {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.add-to-cart-button {
+  width: 100%;
+  padding: 12px;
+  background-color: #ff4081;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-bottom: 30px;
+}
+
+.add-to-cart-button:hover {
+  background-color: #e03070;
+}
+
+/* Expandable Sections */
+.expandable-sections {
+  border-top: 1px solid #eee;
+}
+
+.expandable-section {
+  border-bottom: 1px solid #eee;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  cursor: pointer;
+}
+
+.section-header h3 {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  margin: 0;
+}
+
+.section-content {
+  padding-bottom: 15px;
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+}
+
+.key-ingredients {
+  list-style-type: none;
+  padding-left: 0;
+  margin-top: 10px;
+}
+
+.key-ingredients li {
+  position: relative;
+  padding-left: 15px;
+  margin-bottom: 5px;
+}
+
+.key-ingredients li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #ff4081;
+}
+
+/* Reviews Section */
+.reviews-section {
+  margin-top: 50px;
+  text-align: center;
+  padding: 30px 0;
+  position: relative;
+}
+
+.reviews-title {
+  font-size: 20px;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 20px;
+  position: relative;
+  display: inline-block;
+}
+
+.reviews-title::before,
+.reviews-title::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 100px;
+  height: 1px;
+  background-color: #ddd;
+}
+
+.reviews-title::before {
+  right: 100%;
+  margin-right: 15px;
+}
+
+.reviews-title::after {
+  left: 100%;
+  margin-left: 15px;
+}
+
+.write-review-button {
+  padding: 10px 20px;
+  background-color: white;
+  color: #ff4081;
+  border: 1px solid #ff4081;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.write-review-button:hover {
+  background-color: #ffeff4;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .product-details-content {
+    flex-direction: column;
+  }
+
+  .product-images {
+    max-width: 100%;
+  }
+
+  .main-image {
+    height: 350px;
+  }
+
+  .reviews-title::before,
+  .reviews-title::after {
+    width: 50px;
+  }
+}

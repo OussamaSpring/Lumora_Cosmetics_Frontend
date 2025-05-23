@@ -1,87 +1,70 @@
 import React, { useContext, useEffect, useState } from 'react';
 import Product from './Product';
 import './products.css';
-// Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
-// Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-// Import required modules
-import { Pagination, Navigation } from 'swiper/modules';
-import { CartContaxt } from '../../contaxt/Contaxt';
+import line from '../man_women_child/photo/Line 1.png';
+import { Navigation } from 'swiper/modules';
+import axios from 'axios';
 
 function Products() {
-    const api_url = "https://fakestoreapi.com/products";
+    const api_url = "http://lumora.runasp.net/api/products";
     const [products, setProducts] = useState([]);
-    const [categories, setCategories] = useState([]);
-    const [selectedCategory, setSelectedCategory] = useState('all');
-
-    const getProducts = () => {
-        fetch(api_url)
-            .then((res) => res.json())
-            .then((data) => setProducts(data));
-    };
-
-    const getCategories = () => {
-        fetch(`${api_url}/categories`)
-            .then((res) => res.json())
-            .then((data) => setCategories(data));
-    };
-
-    const filterProductsByCategory = (category) => {
-        setSelectedCategory(category);
-        if (category === 'all') {
-            getProducts();
-        } else {
-            fetch(`${api_url}/category/${category}`)
-                .then((res) => res.json())
-                .then((data) => setProducts(data));
-        }
-    };
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
 
     useEffect(() => {
-        getProducts();
-        getCategories();
+        const fetchProducts = async () => {
+            try {
+                const productPromises = [];
+                
+                // Create array of promises for products 1-10
+                for(let id = 1; id <= 10; id++) {
+                    const promise = axios.get(`${api_url}/${id}`, {
+                        timeout: 5000,
+                        headers: {
+                            'Accept': 'application/json',
+                            'Content-Type': 'application/json'
+                        }
+                    });
+                    productPromises.push(promise);
+                }
+
+                // Wait for all promises to resolve
+                const responses = await Promise.all(productPromises);
+                const productData = responses.map(response => response.data);
+                setProducts(productData);
+                setLoading(false);
+            } catch (err) {
+                console.error('Error fetching products:', err);
+                setError('Failed to fetch products');
+                setLoading(false);
+            }
+        };
+
+        fetchProducts();
     }, []);
 
-    const Globalstate = useContext(CartContaxt);
-    console.log(Globalstate);
-    
+    if (loading) return <div>Loading...</div>;
+    if (error) return <div className="error-message">{error}</div>;
+    if (!products.length) return <div>No products found</div>;
+
     return (
-        <div className="products-container">
-            <div className="categories-section">
-                <button 
-                    className={`category-btn ${selectedCategory === 'all' ? 'active' : ''}`}
-                    onClick={() => filterProductsByCategory('all')}
-                >
-                    All Products
-                </button>
-                {categories.map((cat, index) => (
-                    <button 
-                        key={index} 
-                        className={`category-btn ${selectedCategory === cat ? 'active' : ''}`}
-                        onClick={() => filterProductsByCategory(cat)}
-                    >
-                        {cat}
-                    </button>
-                ))}
+        <div className="a-products-container">
+            <div className="a-title">
+                <img className="a-ligne" src={line} alt="decorative line" />
+                <h3>New Arrivals</h3>
+                <img className="a-ligne" src={line} alt="decorative line" />
             </div>
 
-            <div className="products-slider-container">
-                {/* Add navigation elements before and after Swiper */}
-                <div className="swiper-button-prev product-nav-prev"></div>
+            <div className="a-products-slider-container">
                 <Swiper
                     slidesPerView={5}
                     spaceBetween={15}
-                    pagination={{
-                        clickable: true,
-                    }}
-                    navigation={{
-                        nextEl: '.product-nav-next',
-                        prevEl: '.product-nav-prev',
-                    }}
-                    modules={[ Navigation]}
+                    navigation={true}
+                    modules={[Navigation]}
                     breakpoints={{
                         300: {
                             slidesPerView: 2,
@@ -96,15 +79,26 @@ function Products() {
                             spaceBetween: 8
                         }
                     }}
-                    className="product-swiper"
+                    className="a-product-swiper"
                 >
                     {products.map((product) => (
                         <SwiperSlide key={product.id}>
-                            <Product product={product} showbutton={true} />
+                            <Product 
+                                product={{
+                                    id: product.id,
+                                    name: product.name,
+                                    brand: product.brand,
+                                    about: product.about,
+                                    imageUrl: product.imageUrl,
+                                    ingredients: product.ingredients,
+                                    howToUse: product.howToUse,
+                                    price: product.price || '200$'
+                                }} 
+                                showbutton={true} 
+                            />
                         </SwiperSlide>
                     ))}
                 </Swiper>
-                <div className="swiper-button-next product-nav-next"></div>
             </div>
         </div>
     );
